@@ -1,0 +1,255 @@
+-REPORT BASIC LEVEL-
+
+
++For the main page (index):
+    http://localhost:8000/
+        view-source:http://localhost:8000/
+                    <!DOCTYPE html>
+            <html lang="en" dir="ltr">
+              <head>
+                <meta charset="utf-8">
+                <title>FINAL PRACTICE</title>
+              </head>
+              <body style="background-color: powderblue;">
+              <FONT FACE="impact" SIZE = 6 COLOR = 'white'><em><h2>*PEN final practice*</h2></em></FONT>
+
+
+              <FONT FACE="monospace" SIZE = 5 COLOR = 'darkslategray'><h4><br>---------------FORM NUMBER 1----------------<br></h4></FONT>
+                <form action="/listSpecies" method="get">
+                  This form gives the user the information about all species <br> <input type="submit" value="Click to get all species">
+                  <br><br>
+                </form>
+
+
+              <FONT FACE="monospace" SIZE = 5 COLOR = 'darkslategray'><h4><br>---------------FORM NUMBER 2----------------<br></h4></FONT>
+                <form action="/listSpecies" method="get">
+                  This form allows the user to look information of a limited specie <br>
+                  Number of species you want to know:
+                  <input type="text" size="4" name="limit"><br>
+                  <input type="submit" value="Click to search a limited specie"
+                  <br><br>
+                </form>
+
+
+              <FONT FACE="monospace" SIZE = 5 COLOR = 'darkslategray'><h4><br>---------------FORM NUMBER 3----------------<br></h4></FONT>
+                 <form action="/karyotype" method="get">
+                  This form allows the user to look information of a concrete specie <br>
+                  Name of the specie:
+                  <input type="text" size="8" name="specie"><br>
+                  <input type="submit" value="Click to search a concrete specie"
+                  <br><br>
+                </form>
+
+              <FONT FACE="monospace" SIZE = 5 COLOR = 'darkslategray'><h4><br>---------------FORM NUMBER 4----------------<br></h4></FONT>
+                 <form action="/chromosomeLength" method="get">
+                  This form allows the user to know the length of the chromosome of the chosen specie <br>
+                  Name of the specie: <br>
+                     Choose a specie:
+                  <input type="text" size="8" name="specie"><br>
+                     Choose a chromo:
+                  <input type="text" size="3" name="chromo"><br>
+                  <input type="submit" value="Click to search the chromosome lenght"
+                  <br><br>
+                </form>
+
+              </body>
+            </html>
+
+    - http://localhost:8000/hola
+        view-source:http://localhost:8000/hola
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
+
+
++For listSpecies:
+    localhost:8000/listSpecies
+         view-source:http://localhost:8000/listSpecies
+
+         <html>
+                                                <body style="background-color: D7B7BC;"><FONT FACE="monospace" SIZE = 5 COLOR = 'white'><h3>List of all the species </h3></FONT>
+                                                <ol><li>Mouse</li><li>Human</li><li>Guinea Pig</li><li>Mouse CBA/J</li><li>Midas cichlid</li><li>Anole lizard</li><li>Capuchin</li><li>Ballan wrasse</li><li>Leopard</li><li>Fugu</li><li>Black snub-nosed monkey</li><li>Zig-zag eel</li><li>Blue-crowned manakin</li><li>Damara mole rat</li><li>Opossum</li><li>Donkey</li><li>Platyfish</li><li>Little spotted kiwi</li><li>Ruff</li><li>Stickleback</li><li>Chinese hamster PICR</li><li>Steppe mouse</li><li>Indian medaka</li><li>Upper Galilee mountains blind mole rat</li><li>Abingdon island giant tortoise</li><li>Spiny chromis</li><li>Asian bonytongue</li><li>Tasmanian devil</li><li>Chicken</li><li>Coelacanth</li><li>Helmeted guineafowl</li><li>Mouse A/J</li><li>Sailfin molly</li><li>Koala</li><li>Mouse FVB/NJ</li><li>Chinese hamster CHOK1GS</li><li>Mouse LP/J</li><li>Naked mole-rat female</li><li>Spoon-billed sandpiper</li><li>Duck</li><li>Bolivian squirrel monkey</li><li>Bengalese finch</li><li>Marmoset</li><li>Sheep</li><li>Olive baboon</li><li>Crab-eating macaque</li><li>Mainland tiger snake</li><li>Goat</li><li>Mummichog</li><li>American black bear</li><li>Mouse NZO/HlLtJ</li><li>Wallaby</li><li>Dolphin</li><li>Western mosquitofish</li><li>Cat</li><li>Bonobo</li><li>Gibbon</li><li>Vervet-AGM</li><li>Cow</li><li>Clown anemonefish</li><li>Shrew mouse</li><li>Japanese quail</li><li>Tarsier</li><li>Great spotted kiwi</li><li>Pig-tailed macaque</li><li>Tuatara</li><li>Pink-footed goose</li><li>Climbing perch</li><li>Spotted gar</li><li>Golden snub-nosed monkey</li><li>Daurian ground squirrel</li><li>Amazon molly</li><li>Turbot</li><li>Algerian mouse</li><li>Lamprey</li><li>Xenopus</li><li>Agassiz's desert tortoise</li><li>American bison</li><li>Mouse 129S1/SvImJ</li><li>Channel catfish</li><li>Degu</li><li>Angola colobus</li><li>Golden-collared manakin</li><li>Eastern happy</li><li>Greater bamboo lemur</li><li>Mouse WSB/EiJ</li><li>Armadillo</li><li>Mangrove rivulus</li><li>Mouse DBA/2J</li><li>Arctic ground squirrel</li><li>Gorilla</li><li>Mouse Lemur</li><li>Drill</li><li>Central bearded dragon</li><li>American mink</li><li>Great Tit</li><li>Macaque</li><li>Platypus</li><li>Japanese medaka HNI</li><li>Hagfish</li><li>Dingo</li><li>Zebrafish</li><li>Mouse NOD/ShiLtJ</li><li>Bicolor damselfish</li><li>Long-tailed chinchilla</li><li>Mouse C57BL/6NJ</li><li>Mexican tetra</li><li>Squirrel</li><li>Alpaca</li><li>Australian saltwater crocodile</li><li>White-throated sparrow</li><li>Orange clownfish</li><li>Tiger</li><li>Turkey</li><li>Ugandan red Colobus</li><li>Alpine marmot</li><li>Common canary</li><li>Okarito brown kiwi</li><li>Argentine black and white tegu</li><li>Sloth</li><li>Ryukyu mouse</li><li>Shrew</li><li>Zebra Finch</li><li>Gelada</li><li>Tiger tail seahorse</li><li>Brazilian guinea pig</li><li>Periophthalmus magnuspinnatus</li><li>Ma's night monkey</li><li>Microbat</li><li>Pig</li><li>Coquerel's sifaka</li><li>Drosophila melanogaster</li><li>Makobe Island cichlid</li><li>Lesser hedgehog tenrec</li><li>Dark-eyed junco</li><li>Red fox</li><li>Chimpanzee</li><li>Chinese hamster CriGri</li><li>Greater amberjack</li><li>Hedgehog</li><li>Elephant</li><li>Lyretail cichlid</li><li>Chinese softshell turtle</li><li>Prairie vole</li><li>Ocean sunfish</li><li>Polar bear</li><li>Emu</li><li>Rabbit</li><li>Monterrey platyfish</li><li>Sheepshead minnow</li><li>C.intestinalis</li><li>Red-bellied piranha</li><li>Northern pike</li><li>Pika</li><li>Ferret</li><li>C.savignyi</li><li>Mongolian gerbil</li><li>Paramormyrops kingsleyae</li><li>Lesser Egyptian jerboa</li><li>Kangaroo rat</li><li>Sooty mangabey</li><li>Tilapia</li><li>Orangutan</li><li>Painted turtle</li><li>Zebra mbuna</li><li>Horse</li><li>Golden Hamster</li><li>Megabat</li><li>Yellowtail amberjack</li><li>Blue tit</li><li>Mouse PWK/PhJ</li><li>Cod</li><li>Burton's mouthbrooder</li><li>Saccharomyces cerevisiae</li><li>Tongue sole</li><li>Dog</li><li>Swamp eel</li><li>Panda</li><li>American beaver</li><li>Budgerigar</li><li>Northern American deer mouse</li><li>Flycatcher</li><li>Wild yak</li><li>Mouse BALB/cJ</li><li>Mouse CAST/EiJ</li><li>Rat</li><li>Bushbaby</li><li>Naked mole-rat male</li><li>Caenorhabditis elegans</li><li>Guppy</li><li>Japanese medaka HSOK</li><li>Tetraodon</li><li>Chilean tinamou</li><li>Tree Shrew</li><li>Mouse C3H/HeJ</li><li>Shortfin molly</li><li>Japanese medaka HdrR</li><li>Hyrax</li><li>Mouse AKR/J</li></ol>
+                                                </body>
+                                                </html>
++For listSpecies (with a limit):
+   - http://localhost:8000/listSpecies?limit=
+        view-source:http://localhost:8000/listSpecies?limit=
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
+
+   - http://localhost:8000/listSpecies?limit=3
+        view-source:http://localhost:8000/listSpecies?limit=3
+
+                            <html>
+                            <body style="background-color: D7B7BC;"><FONT FACE="monospace" SIZE = 5 COLOR = 'white'><h3>List of the chosen limited species </h3></FONT>
+                            <ol><li>Golden Hamster</li><li>Human</li><li>Opossum</li></ol>
+                            </body>
+                            </html>
+
+   - http://localhost:8000/listSpecies?limit
+         view-source:http://localhost:8000/listSpecies?limit
+
+                            <html>
+                            <body style="background-color: D7B7BC;"><FONT FACE="monospace" SIZE = 5 COLOR = 'white'><h3>List of all the species </h3></FONT>
+                            <ol><li>Mouse</li><li>Human</li><li>Guinea Pig</li><li>Mouse CBA/J</li><li>Midas cichlid</li><li>Anole lizard</li><li>Capuchin</li><li>Ballan wrasse</li><li>Leopard</li><li>Fugu</li><li>Black snub-nosed monkey</li><li>Zig-zag eel</li><li>Blue-crowned manakin</li><li>Damara mole rat</li><li>Opossum</li><li>Donkey</li><li>Platyfish</li><li>Little spotted kiwi</li><li>Ruff</li><li>Stickleback</li><li>Chinese hamster PICR</li><li>Steppe mouse</li><li>Indian medaka</li><li>Upper Galilee mountains blind mole rat</li><li>Abingdon island giant tortoise</li><li>Spiny chromis</li><li>Asian bonytongue</li><li>Tasmanian devil</li><li>Chicken</li><li>Coelacanth</li><li>Helmeted guineafowl</li><li>Mouse A/J</li><li>Sailfin molly</li><li>Koala</li><li>Mouse FVB/NJ</li><li>Chinese hamster CHOK1GS</li><li>Mouse LP/J</li><li>Naked mole-rat female</li><li>Spoon-billed sandpiper</li><li>Duck</li><li>Bolivian squirrel monkey</li><li>Bengalese finch</li><li>Marmoset</li><li>Sheep</li><li>Olive baboon</li><li>Crab-eating macaque</li><li>Mainland tiger snake</li><li>Goat</li><li>Mummichog</li><li>American black bear</li><li>Mouse NZO/HlLtJ</li><li>Wallaby</li><li>Dolphin</li><li>Western mosquitofish</li><li>Cat</li><li>Bonobo</li><li>Gibbon</li><li>Vervet-AGM</li><li>Cow</li><li>Clown anemonefish</li><li>Shrew mouse</li><li>Japanese quail</li><li>Tarsier</li><li>Great spotted kiwi</li><li>Pig-tailed macaque</li><li>Tuatara</li><li>Pink-footed goose</li><li>Climbing perch</li><li>Spotted gar</li><li>Golden snub-nosed monkey</li><li>Daurian ground squirrel</li><li>Amazon molly</li><li>Turbot</li><li>Algerian mouse</li><li>Lamprey</li><li>Xenopus</li><li>Agassiz's desert tortoise</li><li>American bison</li><li>Mouse 129S1/SvImJ</li><li>Channel catfish</li><li>Degu</li><li>Angola colobus</li><li>Golden-collared manakin</li><li>Eastern happy</li><li>Greater bamboo lemur</li><li>Mouse WSB/EiJ</li><li>Armadillo</li><li>Mangrove rivulus</li><li>Mouse DBA/2J</li><li>Arctic ground squirrel</li><li>Gorilla</li><li>Mouse Lemur</li><li>Drill</li><li>Central bearded dragon</li><li>American mink</li><li>Great Tit</li><li>Macaque</li><li>Platypus</li><li>Japanese medaka HNI</li><li>Hagfish</li><li>Dingo</li><li>Zebrafish</li><li>Mouse NOD/ShiLtJ</li><li>Bicolor damselfish</li><li>Long-tailed chinchilla</li><li>Mouse C57BL/6NJ</li><li>Mexican tetra</li><li>Squirrel</li><li>Alpaca</li><li>Australian saltwater crocodile</li><li>White-throated sparrow</li><li>Orange clownfish</li><li>Tiger</li><li>Turkey</li><li>Ugandan red Colobus</li><li>Alpine marmot</li><li>Common canary</li><li>Okarito brown kiwi</li><li>Argentine black and white tegu</li><li>Sloth</li><li>Ryukyu mouse</li><li>Shrew</li><li>Zebra Finch</li><li>Gelada</li><li>Tiger tail seahorse</li><li>Brazilian guinea pig</li><li>Periophthalmus magnuspinnatus</li><li>Ma's night monkey</li><li>Microbat</li><li>Pig</li><li>Coquerel's sifaka</li><li>Drosophila melanogaster</li><li>Makobe Island cichlid</li><li>Lesser hedgehog tenrec</li><li>Dark-eyed junco</li><li>Red fox</li><li>Chimpanzee</li><li>Chinese hamster CriGri</li><li>Greater amberjack</li><li>Hedgehog</li><li>Elephant</li><li>Lyretail cichlid</li><li>Chinese softshell turtle</li><li>Prairie vole</li><li>Ocean sunfish</li><li>Polar bear</li><li>Emu</li><li>Rabbit</li><li>Monterrey platyfish</li><li>Sheepshead minnow</li><li>C.intestinalis</li><li>Red-bellied piranha</li><li>Northern pike</li><li>Pika</li><li>Ferret</li><li>C.savignyi</li><li>Mongolian gerbil</li><li>Paramormyrops kingsleyae</li><li>Lesser Egyptian jerboa</li><li>Kangaroo rat</li><li>Sooty mangabey</li><li>Tilapia</li><li>Orangutan</li><li>Painted turtle</li><li>Zebra mbuna</li><li>Horse</li><li>Golden Hamster</li><li>Megabat</li><li>Yellowtail amberjack</li><li>Blue tit</li><li>Mouse PWK/PhJ</li><li>Cod</li><li>Burton's mouthbrooder</li><li>Saccharomyces cerevisiae</li><li>Tongue sole</li><li>Dog</li><li>Swamp eel</li><li>Panda</li><li>American beaver</li><li>Budgerigar</li><li>Northern American deer mouse</li><li>Flycatcher</li><li>Wild yak</li><li>Mouse BALB/cJ</li><li>Mouse CAST/EiJ</li><li>Rat</li><li>Bushbaby</li><li>Naked mole-rat male</li><li>Caenorhabditis elegans</li><li>Guppy</li><li>Japanese medaka HSOK</li><li>Tetraodon</li><li>Chilean tinamou</li><li>Tree Shrew</li><li>Mouse C3H/HeJ</li><li>Shortfin molly</li><li>Japanese medaka HdrR</li><li>Hyrax</li><li>Mouse AKR/J</li></ol>
+                            </body>
+                            </html>
+
++For Karyotype:
+    -http://localhost:8000/karyotype?specie=
+        view-source:http://localhost:8000/karyotype?specie=
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
+
+    - http://localhost:8000/karyotype?specie
+        view-source:http://localhost:8000/karyotype?specie
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
+
+    - http://localhost:8000/karyotype?specie=8
+        view-source:http://localhost:8000/karyotype?specie=8
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
+
+    - http://localhost:8000/karyotype?specie=hola
+        view-source:http://localhost:8000/karyotype?specie=hola
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
+
+    - http://localhost:8000/karyotype?specie=mouse
+        view-source:http://localhost:8000/karyotype?specie=mouse
+
+                            <html>
+                            <body style="background-color: D7B7BC;"><FONT FACE="monospace" SIZE = 5 COLOR = 'white'><h3>Chromosomes of the chosen specie: </h3></FONT>
+                            <ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li><li>19</li><li>X</li><li>Y</li><li>MT</li></ul>
+                            </body>
+                            </html>
+
++For chromosomeLength:
+    - http://localhost:8000/chromosomeLength?specie=&chromo=
+        view-source:http://localhost:8000/chromosomeLength?specie=&chromo=
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
+
+    - http://localhost:8000/chromosomeLength?specie=hola&chromo=
+        view-source:http://localhost:8000/chromosomeLength?specie=hola&chromo=
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
+
+    - http://localhost:8000/chromosomeLength?specie=hola&chromo=adios
+        view-source:http://localhost:8000/chromosomeLength?specie=hola&chromo=adios
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
+
+    - http://localhost:8000/chromosomeLength?specie=hola&chromo=3
+        view-source:http://localhost:8000/chromosomeLength?specie=hola&chromo=3
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
+
+    - http://localhost:8000/chromosomeLength?chromo=3&specie=mouse
+        view-source:http://localhost:8000/chromosomeLength?chromo=3&specie=mouse
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
+
+    - http://localhost:8000/chromosomeLength?specie=mouse&chromo=3
+        view-source:http://localhost:8000/chromosomeLength?specie=mouse&chromo=3
+
+                                    <html>
+                                    <body style="background-color: D7B7BC;"><FONT FACE="monospace" SIZE = 5 COLOR = 'white'><h3>The length of the chromosome of the chosen specie is: </h3></FONT>
+                                    <ul><li>160039680</li>
+
+
+
+
+
+
+
+
+
