@@ -381,7 +381,6 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                                                     <body style="background-color: D7B7BC;"><FONT FACE="monospace" SIZE = 5 COLOR = 'white'><h3>The names of the genes located in the chromosome asked from the start to end positions are: </h3></FONT>
                                                                     <ul>"""
                 for elem in resp:
-                    print(elem)
                     position1 = elem['feature_type']
 
                     if position1 == "gene":
