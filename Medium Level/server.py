@@ -128,6 +128,14 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                                         </body>
                                                         </html>
                                                         """
+            except IndexError:
+                filename = 'error.html'
+                with open(filename, 'r') as f:
+                    contents = f.read()
+            except TypeError:
+                filename = 'error.html'
+                with open(filename, 'r') as f:
+                    contents = f.read()
             except ValueError:
                 filename = 'error.html'
                 with open(filename, 'r') as f:
@@ -136,10 +144,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                 filename = 'error.html'
                 with open(filename, 'r') as f:
                     contents = f.read()
-            except TypeError:
-                filename = 'error.html'
-                with open(filename, 'r') as f:
-                    contents = f.read()
+
 
         elif '/chromosomeLength' in self.path:
             try:
@@ -296,7 +301,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                 with open(filename, 'r') as f:
                     contents = f.read()
 
-        elif '/geneCal' in self.path:
+        elif '/geneCalc' in self.path:
             try:
                 gene = self.path.split('=')[1]
                 conn = http.client.HTTPConnection('rest.ensembl.org')
@@ -344,6 +349,10 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                                                     </body>
                                                                     </html>
                                                                     """
+            except IndexError:
+                filename = 'error.html'
+                with open(filename, 'r') as f:
+                    contents = f.read()
             except ValueError:
                 filename = 'error.html'
                 with open(filename, 'r') as f:
