@@ -111,6 +111,19 @@
                             </html>
 
 +For Karyotype:
+    - http://localhost:8000/karyotype?hola
+        view-source:http://localhost:8000/karyotype?hola
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
+
     -http://localhost:8000/karyotype?specie=
         view-source:http://localhost:8000/karyotype?specie=
             <!DOCTYPE html>
@@ -173,6 +186,19 @@
                             </html>
 
 +For chromosomeLength:
+    - http://localhost:8000/chromosomeLength?hola
+        view-source:http://localhost:8000/chromosomeLength?hola
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
+
     - http://localhost:8000/chromosomeLength?specie=&chromo=
         view-source:http://localhost:8000/chromosomeLength?specie=&chromo=
             <!DOCTYPE html>
@@ -248,6 +274,18 @@
 ---------------------------------------------------------------------------------------------
 
 +For geneSeq:
+    - http://localhost:8000/geneSeq?hola
+        view-source:http://localhost:8000/geneSeq?hola
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
     - http://localhost:8000/geneSeq?gene=
         view-source:http://localhost:8000/geneSeq?gene=
             <!DOCTYPE html>
@@ -302,6 +340,18 @@
                             <ul><li>ATTCCGGCTCCCGCGGCTGCAGGCGCGCGGCTAGAGTGCCTGGCGGGCTCCGGCTTCCGCGTCCGCCCCGGCCCCGGTCCAGACTTAGTCTTCAGCTCCGCGCCCGCTCCGCCGCGGCCCACCGCGCCCGCCGGCAGCCGAGCCCCCAGCGACGCCCGCACAGCTCCGGGTGCCCAGACAGGGGGCCATGCCGTGCCGGAGGGAGGAGGAAGAGGAAGCCGGCGAGGAGGCGGAGGGGGAGGAAGAGGAGGAGGACAGCTTCCTCCTACTGCAGCAGTCAGTGGCGCTGGGCAGCTCGGGCGAGGTGGACCGGCTGGTGGCCCAGATCGGCGAGACGCTGCAGCTGGACGCGGCGCAGCACAGCCCGGCCTCGCCGTGCGGGCCCCCGGGGGCGCCGCTGCGGGCCCCGGGGCCCCTGGCTGCGGCGGTGCCGGCGGACAAGGCCAGGTCCCCGGCGGTGCCGCTGCTGCTGCCGCCCGCGTTGGCGGAGACTGTGGGCCCGGCGCCCCCTGGGGTCCTGCGCTGCGCCCTGGGGGACCGCGGCCGCGTGCGGGGCCGCGCTGCGCCCTACTGCGTGGCCGAGCTCGCCACAGGCCCCAGCGCGCTGTCCCCACTGCCCCCTCAGGCCGACCTTGATGGGCCTCCGGGAGCTGGCAAGCAGGGCATCCCGCAGCCGCTGTCGGGTCCGTGCCGGCGAGGATGGCTCCGGGGCGCCGCCGCCTCCCGCCGCCTGCAGCAGCGACGCGGGTCCCAACCAGAAACCCGCACAGGCGACGACGACCCGCACCGGCTTCTGCAGCAGCTAGTGCTCTCTGGAAACCTCATCAAGGAGGCCGTGCGAAGGCTTCATTCGCGACGGCTGCAGTTACGTGCAAAGCTTCCCCAACGCCCGCTCCTGGGACCTCTGTCGGCCCCGGTGCATGAACCCCCTTCGCCTCGCAGCCCTCGCGCGGCCTGCAGTGACCCTGGCGCCTCCGGGAGGGCGCAGCTCAGAACTGGCGACGGCGTTCTTGTGCCTGGCAGCTAACACGCCCGGGGTGGCCACAGCGCCAGCCTCAGACTGGAGGGCAAGGGGTTCCCTTGAGGGCTGCAGTTCTACTCAGGCTGGTGGAGAACTCTGGCTTTTGGAAGCGAGAGTAAAAAGCTAATGACGAGGAACCGAAAAATCGCGAGTGTTTCGCGGGTAACTGGGGTTGAGGGCCAAAATATTTGGAATGAAGGACTTTGGCCCTATTTAAGGCAGATTTTACAGAGCGCACCTCAAACGTACAAGTCAGTAGGACTCCTTATTTGGCGTGACCCGACCTGGCCGCGGAGCCTGCATTTCCTCGCAGCCTCTCAGTGCCCTCCAGCCCCGCGACCATGTGGCCACAATCCACGCTTCTCCGGATCGCGGTGCGCCGGAACCACGGAGGATGATGCCAGTTACTTGCTTTACCTTTTCAGGGCTGGCTCCTGATCCACTTTGGGGGAGGAGAACATGAGTAGATAATTTCAGGGTGCAGCCCAATCTGCCAGACTTAAAAAAACCATCTTGTGTCTTTGGAGGTGCTGCTTAATACCAAACATGCGGTGCCATGAAGGGACCCTTTGGGGGTTGAATAGGAGTTAACCCCTGCGCTCTCTTTGCAACTGTCTCTCTTCTCAGAGTGGTGGGGGAAGGCTGTACGACACGGGTGGGGAAAGGAGGTGGGGGCGGGGAGTATTGAATGGTGGTGGAAGGGTAGAGAGGCGCGGAGTGAACCCCACGCCCTGTCTAAAGTGTATTTTCAGAGCCGGCCCGCCTCTCCTCGGTTCAAGGTCACTGTTTCCTGGGCACGCACTGGGTTGCGGGACAGAGTAGCCAGGTTCTGCCGGTGCTCGGAGAAGAGCGCAGTGTTTTGCAAGTGCTGGAGTCTCCTGAGGACACGCGCGTCGCCGCCACCGCGGGTGTGGGAAAGCGCGGACGTGCTGGGCGGCTGTGCTTCGGTAGGCGACCACCGCCCCTGGCCGCGCTCCGGGCTTTCACGGAAACTCCCGAGACCGGGCCCTGGGTTCCTCCTCTCCTACTCGGCTCTGCAGTCCTACTCAAGCGGGTGGCTCTGGGATCCTGGGGGCCTGGGTTGGGGGCTAGGGAGACGCCATGTGATGGACACTCCAGGGACACACAGCCTAGCACAGCAGCTTATAATGGGCTCTCCGGGGCCATTTGCAATAACAGCTGCAATTCCCTGGATAGACGAGTTGATTTCCTCCCTCTGCCCCTCCCCCAGCCATGCCAGCTGGCCTTTGTAAGTGCAGGAAACCGAGTAGAAAATGTGACCCTCCAAATGGAGAAGCTGCAGGCTTTGCCATTGTGAACCATGGTGAAGTGCTTGGAACATACTGTTCACTCACTCTAAAGGCGCTGAGACTGTGCTGTTGTTCTCGTTTTTATAGTCAATGGCTTGTTCATCATCCAGATGTGGCTACTGACATATCTACACTTCGCACCGGAGTGTCTGGAATTGTGGCTATCCTGATTATAGGATTTTAACTTAACTGAAATGCCTGCTTTGAATAAATGTGTTGGGTTTTTTGTTTGGTTTTATTTTATACTTGCCATCAGTGAAAAAGATGTACAGAACACATTTCTCTGATCTCCATAAACATGAAAACACTTGAAATCTC</li>
 
 +For geneInfo:
+    - http://localhost:8000/geneInfo?hola
+        view-source:http://localhost:8000/geneInfo?hola
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
     - http://localhost:8000/geneInfo?gene=
         view-source:http://localhost:8000/geneInfo?gene=
             <!DOCTYPE html>
@@ -355,9 +405,21 @@
                                 <body style="background-color: D7B7BC;"><FONT FACE="monospace" SIZE = 5 COLOR = 'white'><h3>The information asked of the given human gene is: </h3></FONT>
                                 <ul><li><FONT FACE="monospace" SIZE = 5 COLOR = 'darkslategray'><h5>The start of the sequence is: </h5></FONT>97319267</li><li><FONT FACE="monospace" SIZE = 5 COLOR = 'darkslategray'><h5>The end of the sequence is: </h5></FONT>97321915</li><li><FONT FACE="monospace" SIZE = 5 COLOR = 'darkslategray'><h5>The length of the sequence is: </h5></FONT>2648</li><li><FONT FACE="monospace" SIZE = 5 COLOR = 'darkslategray'><h5>The name of the gene is: </h5></FONT>GRCh38</li>
 
-+For geneCal:
-    - http://localhost:8000/geneCal?gene=
-        view-source:http://localhost:8000/geneCal?gene=
++For geneCalc:
+    - view-source:http://localhost:8000/geneCalc?hola
+        view-source:http://localhost:8000/geneCalc?hola
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
+    - http://localhost:8000/geneCalc?gene=
+        view-source:http://localhost:8000/geneCalc?gene=
             <!DOCTYPE html>
           <head>
             <title>Error page</title>
@@ -369,8 +431,8 @@
           </body>
         </html>
 
-    - http://localhost:8000/geneCal?gene=hola
-        view-source:http://localhost:8000/geneCal?gene=hola
+    - http://localhost:8000/geneCalc?gene=hola
+        view-source:http://localhost:8000/geneCalc?gene=hola
             <!DOCTYPE html>
           <head>
             <title>Error page</title>
@@ -382,8 +444,8 @@
           </body>
         </html>
 
-    - http://localhost:8000/geneCal?gene=9
-        view-source:http://localhost:8000/geneCal?gene=9
+    - http://localhost:8000/geneCalc?gene=9
+        view-source:http://localhost:8000/geneCalc?gene=9
             <!DOCTYPE html>
           <head>
             <title>Error page</title>
@@ -395,15 +457,15 @@
           </body>
         </html>
 
-    - http://localhost:8000/geneCal?gene=frat1
-        view-source:http://localhost:8000/geneCal?gene=frat1
+    - http://localhost:8000/geneCalc?gene=frat1
+        view-source:http://localhost:8000/geneCalc?gene=frat1
 
                             <html>
                             <body style="background-color: D7B7BC;"><FONT FACE="monospace" SIZE = 5 COLOR = 'white'><h3>The calculations asked of the given sequence is: </h3></FONT>
                             <ul><li><FONT FACE="monospace" SIZE = 5 COLOR = 'darkslategray'><h5>The total lenght of the sequence is: </h5></FONT>2649</li><li><FONT FACE="monospace" SIZE = 5 COLOR = 'darkslategray'><h5>The percentage of A's in the sequence is: </h5></FONT>18.0</li><li><FONT FACE="monospace" SIZE = 5 COLOR = 'darkslategray'><h5>The percentage of T's in the sequence is: </h5></FONT>19.7</li><li><FONT FACE="monospace" SIZE = 5 COLOR = 'darkslategray'><h5>The percentage of C's in the sequence is: </h5></FONT>30.2</li><li><FONT FACE="monospace" SIZE = 5 COLOR = 'darkslategray'><h5>The percentage of G's in the sequence is: </h5></FONT>32.0</li>
 
-    - http://localhost:8000/geneCal?gene=FRAT1
-        view-source:http://localhost:8000/geneCal?gene=FRAT1
+    - http://localhost:8000/geneCalc?gene=FRAT1
+        view-source:http://localhost:8000/geneCalc?gene=FRAT1
 
                             <html>
                             <body style="background-color: D7B7BC;"><FONT FACE="monospace" SIZE = 5 COLOR = 'white'><h3>The calculations asked of the given sequence is: </h3></FONT>
@@ -411,6 +473,19 @@
 
 
 +For geneList:
+    - http://localhost:8000/geneList?hola
+        view-source:http://localhost:8000/geneList?hola
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
+
     - http://localhost:8000/geneList?chromo=&start=&end=
         view-source:http://localhost:8000/geneList?chromo=&start=&end=
             <!DOCTYPE html>
@@ -505,9 +580,9 @@
     - http://localhost:8000/geneList?chromo=1&start=0&end=30000
         view-source:http://localhost:8000/geneList?chromo=1&start=0&end=30000
 
-                                <html>
-                                <body style="background-color: D7B7BC;"><FONT FACE="monospace" SIZE = 5 COLOR = 'white'><h3>The names of the genes located in the chromosome asked from the start to end positions are: </h3></FONT>
-                                <ul><li>The name of the chromosome is: ENSG00000223972</li><li>The name of the chromosome is: ENSG00000227232</li><li>The name of the chromosome is: ENSG00000278267</li><li>The name of the chromosome is: ENSG00000243485</li>
+                            <html>
+                            <body style="background-color: D7B7BC;"><FONT FACE="monospace" SIZE = 5 COLOR = 'white'><h3>The names of the genes located in the chromosome asked from the start to end positions are: </h3></FONT>
+                            <ul><li>The name of the chromosome is: ENSG00000223972</li><li>The name of the chromosome is: ENSG00000227232</li><li>The name of the chromosome is: ENSG00000278267</li><li>The name of the chromosome is: ENSG00000243485</li>
 
 
 
