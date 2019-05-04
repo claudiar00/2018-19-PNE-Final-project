@@ -77,7 +77,12 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                 text_json = r1.read().decode("utf-8")
                 resp = json.loads(text_json)
                 species_l = resp['species']
-                if limit == 0:
+                if type(limit) != int:
+                    answer_value = 400
+                    filename = 'error.html'
+                    with open(filename, 'r') as f:
+                        contents = f.read()
+                elif limit == 0:
                     limit = len(species_l)
                 conn.close()
                 if 'json' in arguments:
@@ -173,60 +178,68 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
 
 
         elif '/chromosomeLength' in self.path:
+            try:
+                arguments = self.main(self.path)
+                if ('specie') in arguments and ('chromo') in arguments:
+                    specie = arguments['specie']
+                    chromo = arguments['chromo']
+                    print("The chromosome number to study its length is: ", chromo)
+                    print("The specie to study is: ", specie)
+                    conn = http.client.HTTPConnection('rest.ensembl.org')
+                    conn.request("GET", "/info/assembly/" + specie + "?content-type=application/json")
+                    r1 = conn.getresponse()
+                    print()
+                    print("Response received: ", end='')
+                    print(r1.status, r1.reason)
+                    text_json = r1.read().decode("utf-8")
+                    resp = json.loads(text_json)
+                    if 'top_level_region' in resp:
+                        info = resp['top_level_region']
+                        length = 0
+                        for elem in info:
+                            if elem['name'] == chromo:
+                                length = str(elem['length'])
+                        print(length)
+                        if 'json' in arguments:
+                            json_response = True
+                            resp_ ={'Length' : length}
+                            contents = json.dumps(resp_)
+                        else:
+                            json_response = False
+                            contents = """
+                                                                                <html>
+                                                                                <body style="background-color: D7B7BC;"><FONT FACE="monospace" SIZE = 5 COLOR = 'white'><h3>The length of the chromosome of the chosen specie is: </h3></FONT>
+                                                                                <ul>"""
 
-            arguments = self.main(self.path)
-            if 'specie' in arguments and 'chromo' in arguments and arguments['specie'] != "" and arguments['chromo'] != "":
-                specie = arguments['specie']
-                chromo = arguments['chromo']
-                print("The chromosome number to study its length is: ", chromo)
-                print("The specie to study is: ", specie)
-                conn = http.client.HTTPConnection('rest.ensembl.org')
-                conn.request("GET", "/info/assembly/" + specie + "?content-type=application/json")
-                r1 = conn.getresponse()
-                print()
-                print("Response received: ", end='')
-                print(r1.status, r1.reason)
-                text_json = r1.read().decode("utf-8")
-                resp = json.loads(text_json)
-                if 'top_level_region' in resp:
-                    info = resp['top_level_region']
-                    length = 0
-                    for elem in info:
-                        if elem['name'] == chromo:
-                            length = str(elem['length'])
-                    print(length)
-                    if 'json' in arguments:
-                        json_response = True
-                        resp_ ={'Length' : length}
-                        contents = json.dumps(resp_)
+
+                            contents = contents + "<li>" + str(length) + "</li>"
+
+                            """</ul>
+                                                                                </body>
+                                                                                </html>
+                                                                                """
                     else:
-                        json_response = False
-                        contents = """
-                                                                            <html>
-                                                                            <body style="background-color: D7B7BC;"><FONT FACE="monospace" SIZE = 5 COLOR = 'white'><h3>The length of the chromosome of the chosen specie is: </h3></FONT>
-                                                                            <ul>"""
+                        answer_value = 404
+                        filename = 'error.html'
+                        with open(filename, 'r') as f:
+                            contents = f.read()
 
-
-                        contents = contents + "<li>" + str(length) + "</li>"
-
-                        """</ul>
-                                                                            </body>
-                                                                            </html>
-                                                                            """
                 else:
                     answer_value = 404
                     filename = 'error.html'
                     with open(filename, 'r') as f:
                         contents = f.read()
 
-            else:
-                answer_value = 404
+            except KeyError:
+                answer_value = 400
                 filename = 'error.html'
                 with open(filename, 'r') as f:
                     contents = f.read()
-
-
-
+            except TypeError:
+                answer_value = 400
+                filename = 'error.html'
+                with open(filename, 'r') as f:
+                    contents = f.read()
 
         elif '/geneSeq' in self.path:
             try:
@@ -345,7 +358,6 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
             except KeyError:
                 answer_value = 400
                 filename = 'error.html'
-                print("hola")
                 with open(filename, 'r') as f:
                     contents = f.read()
 
@@ -355,7 +367,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                 with open(filename, 'r') as f:
                     contents = f.read()
 
-        elif '/geneCal' in self.path:
+        elif '/geneCalc' in self.path:
             try:
                 arguments = self.main(self.path)
                 gene = arguments['gene']
@@ -422,7 +434,6 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
             except KeyError:
                 answer_value = 400
                 filename = 'error.html'
-                print("que tal")
                 with open(filename, 'r') as f:
                     contents = f.read()
 
@@ -491,13 +502,11 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
             except KeyError:
                 answer_value = 404
                 filename = 'error.html'
-                print('monja')
                 with open(filename, 'r') as f:
                     contents = f.read()
             except TypeError:
                 answer_value = 404
                 filename = 'error.html'
-                print('jamón')
                 with open(filename, 'r') as f:
                     contents = f.read()
 

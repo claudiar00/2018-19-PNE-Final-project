@@ -50,7 +50,7 @@ data1 = r1.read().decode("utf-8")
 response = json.loads(data1)
 print(response)
 
-conn.request("GET", "/geneCal?gene=FRAT1&json=1")
+conn.request("GET", "/geneCalc?gene=FRAT1&json=1")
 r1 = conn.getresponse()
 print("Response received!: {} {}\n".format(r1.status, r1.reason))
 print("Gene calculations:")
@@ -59,7 +59,6 @@ response = json.loads(data1)
 print(response)
 
 
-#REVISAR ESTE PORQUE EL DICCIONARIO QUE ME DEVUELVE ESTA MAL
 conn.request("GET", "/geneList?chromo=1&start=1&end=30000&json=1")
 r1 = conn.getresponse()
 print("Response received!: {} {}\n".format(r1.status, r1.reason))
