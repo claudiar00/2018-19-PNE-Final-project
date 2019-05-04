@@ -90,6 +90,10 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                             </body>
                                             </html>
                                             """
+            except IndexError:
+                filename = 'error.html'
+                with open(filename, 'r') as f:
+                    contents = f.read()
             except ValueError:
                 filename = 'error.html'
                 with open(filename, 'r') as f:
@@ -180,6 +184,10 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                                                     </body>
                                                                     </html>
                                                                     """
+            except IndexError:
+                filename = 'error.html'
+                with open(filename, 'r') as f:
+                    contents = f.read()
             except ValueError:
                 filename = 'error.html'
                 with open(filename, 'r') as f:
@@ -233,6 +241,10 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                                                     </body>
                                                                     </html>
                                                                     """
+            except IndexError:
+                filename = 'error.html'
+                with open(filename, 'r') as f:
+                    contents = f.read()
             except ValueError:
                 filename = 'error.html'
                 with open(filename, 'r') as f:
@@ -288,6 +300,10 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                                                     </body>
                                                                     </html>
                                                                     """
+            except IndexError:
+                filename = 'error.html'
+                with open(filename, 'r') as f:
+                    contents = f.read()
             except ValueError:
                 filename = 'error.html'
                 with open(filename, 'r') as f:
@@ -401,6 +417,10 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                                                             </body>
                                                                             </html>
                                                                             """
+            except IndexError:
+                filename = 'error.html'
+                with open(filename, 'r') as f:
+                    contents = f.read()
             except ValueError:
                 filename = 'error.html'
                 with open(filename, 'r') as f:
