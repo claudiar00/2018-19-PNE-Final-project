@@ -111,6 +111,19 @@
                             </html>
 
 +For Karyotype:
+    - http://localhost:8000/karyotype?hola
+        view-source:http://localhost:8000/karyotype?hola
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
+
     -http://localhost:8000/karyotype?specie=
         view-source:http://localhost:8000/karyotype?specie=
             <!DOCTYPE html>
@@ -173,6 +186,19 @@
                             </html>
 
 +For chromosomeLength:
+    - http://localhost:8000/chromosomeLength?hola
+        view-source:http://localhost:8000/chromosomeLength?hola
+            <!DOCTYPE html>
+          <head>
+            <title>Error page</title>
+          </head>
+          <body style="background-color: red;">
+            <h1>ERROR PAGE</h1>
+            <h3><p>ERROR!</p></h3>
+            <p>There is an error, check your code and try again!</p>
+          </body>
+        </html>
+
     - http://localhost:8000/chromosomeLength?specie=&chromo=
         view-source:http://localhost:8000/chromosomeLength?specie=&chromo=
             <!DOCTYPE html>
