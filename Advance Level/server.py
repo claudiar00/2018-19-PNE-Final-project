@@ -42,10 +42,6 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
         # Print the request line
         termcolor.cprint(self.requestline, 'green')
 
-        # IN this simple server version:
-        # We are NOT processing the client's request
-        # It is a happy server: It always returns a message saying
-        # that everything is ok
 
         # Message to send back to the client
 
@@ -412,10 +408,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                     s1 = Seq(sequence)
                     total_length = len(sequence)
 
-                    pa = s1.perc('A')
-                    pt = s1.perc('T')
-                    pc = s1.perc('C')
-                    pg = s1.perc('G')
+
                     resp_ = {'Sequence': sequence, 'Length': total_length, 'PercA': pa, 'PercT': pt, 'PercC': pc, 'PercG': pg}
                     print(type(resp_))
                     contents = json.dumps(resp_)
@@ -549,7 +542,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
 
 
 # ------------------------
-# - Server MAIN program
+# - Below we have the server MAIN program
 # ------------------------
 # -- Set the new handler
 Handler = TestHandler
