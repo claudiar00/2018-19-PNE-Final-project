@@ -20,12 +20,10 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
         # Print the request line
         termcolor.cprint(self.requestline, 'green')
 
-        # IN this simple server version:
-        # We are NOT processing the client's request
-        # It is a happy server: It always returns a message saying
-        # that everything is ok
 
-        # Message to send back to the clinet
+
+        # Message to send back to the client
+        #We start here to program the code of the medium level starting with the code that will give back the index, which is our main page
         if self.path == '/' or self.path == '/index.html':
             filename = 'index.html'
             with open(filename, 'r') as f:
@@ -460,7 +458,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
 
 
 # ------------------------
-# - Server MAIN program
+# - Here we have the server MAIN program
 # ------------------------
 # -- Set the new handler
 Handler = TestHandler
