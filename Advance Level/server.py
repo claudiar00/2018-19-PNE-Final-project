@@ -13,6 +13,8 @@ PORT = 8000
 # It means that our class inheritates all his methods and properties
 class TestHandler(http.server.BaseHTTPRequestHandler):
 
+#This is the main function of my program, that will separate the arguments of the paths in order to make it easier for whats coming after
+
     def main (self, path):
         dictionary = dict()
         try:
@@ -45,12 +47,15 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
         # It is a happy server: It always returns a message saying
         # that everything is ok
 
-        # Message to send back to the clinet
+        # Message to send back to the client
+
+        #The main programming code appears below, and it starts with the index page (principal page)
         if self.path == '/' or self.path == '/index.html':
             json_response = False
             filename = 'index.html'
             with open(filename, 'r') as f:
                 contents = f.read()
+        #we program now the code for the path list species
         elif '/listSpecies' in self.path:
             try:
                 arguments = self.main(self.path)
@@ -85,6 +90,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                 elif limit == 0:
                     limit = len(species_l)
                 conn.close()
+                #As this is the advance level of the practice the user can choose to select the json option, so if json is in arguments the program give back the contents in json format
                 if 'json' in arguments:
                     json_response = True
                     species = []
